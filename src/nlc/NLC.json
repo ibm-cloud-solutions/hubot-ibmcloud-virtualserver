@@ -1,0 +1,96 @@
+{
+  "name": "IBMcloudVirtualservers",
+  "version": "0.0.1",
+  "classes": [
+    {
+      "class": "bluemix.vs.help",
+      "emittarget": "bluemix.vs.help",
+      "texts": [
+        "I want help with virtual servers.",
+        "Can you help me with virtual servers?",
+        "Please help me with virtual servers.",
+        "help virtualservers"
+      ]
+    },
+    {
+      "class": "bluemix.vs.list",
+      "emittarget": "bluemix.vs.list",
+      "texts": [
+        "Show my virtual servers",
+        "List virtual servers",
+        "Can you list my virtual servers?"
+      ]
+    },
+    {
+      "class": "bluemix.vs.destroy",
+      "emittarget": "bluemix.vs.destroy",
+      "texts": [
+        "Destroy virtual server",
+        "Remove virtual server",
+        "Delete virtual server",
+        "Can you remove my virtual server?"
+      ],
+      "parameters" : [
+        {
+          "name": "vsname",
+			    "type": "entity",
+			    "prompt": "OK. What is the name of the virtual server you want to remove?"
+        }
+      ]
+    },
+    {
+      "class": "bluemix.vs.reboot",
+      "emittarget": "bluemix.vs.reboot",
+      "texts": [
+        "Reboot virtual server",
+        "Restart virtual server",
+        "Can you reboot my virtual server?"
+      ],
+      "parameters" : [
+        {
+          "name": "vsname",
+			    "type": "entity",
+			    "prompt": "OK. What is the name of the virtual server you want to reboot?"
+        }
+      ]
+    },
+    {
+      "class": "bluemix.vs.start",
+      "emittarget": "bluemix.vs.start",
+      "texts": [
+        "Start virtual server",
+        "I want to start my virtual server",
+        "Can you start my virtual server?"
+      ],
+      "parameters" : [
+        {
+          "name": "vsname",
+			    "type": "entity",
+			    "prompt": "OK. What is the name of the virtual server you want to start?"
+        }
+      ]
+    },
+    {
+      "class": "bluemix.vs.stop",
+      "emittarget": "bluemix.vs.stop",
+      "texts": [
+        "Stop virtual server",
+        "I want to stop my virtual server",
+        "Can you stop my virtual server?"
+      ],
+      "parameters" : [
+        {
+          "name": "vsname",
+			    "type": "entity",
+			    "prompt": "OK. What is the name of the virtual server you want to stop?"
+        }
+      ]
+    }
+  ],
+  "parameter.values" : [
+		{
+			"name": "vsname",
+			"values": []
+		}
+	]
+}
