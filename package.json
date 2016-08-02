@@ -1,6 +1,6 @@
 {
   "name": "hubot-ibmcloud-virtualserver",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "hubot for IBM Cloud Virtual Server interactions",
   "main": "index.js",
   "respository": {
@@ -15,7 +15,7 @@
     "postinstall": "initDb src/nlc/NLC.json",
     "test": ". test/.env && mocha test",
     "coverage": ". test/.env && istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
-    },
+  },
   "keywords": [
     "hubot",
     "hubot-scripts",
