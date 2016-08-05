@@ -4,16 +4,18 @@
   "classes": [
     {
       "class": "bluemix.vs.help",
+      "description": "Help with virtual servers",
       "emittarget": "bluemix.vs.help",
       "texts": [
         "I want help with virtual servers.",
         "Can you help me with virtual servers?",
-        "Please help me with virtual servers.",
+        "Help me with virtual servers.",
         "help virtualservers"
       ]
     },
     {
       "class": "bluemix.vs.list",
+      "description": "Show virtual servers",
       "emittarget": "bluemix.vs.list",
       "texts": [
         "Show my virtual servers",
@@ -23,12 +25,12 @@
     },
     {
       "class": "bluemix.vs.destroy",
+      "description": "Remove a virtual server",
       "emittarget": "bluemix.vs.destroy",
       "texts": [
-        "Destroy virtual server",
-        "Remove virtual server",
-        "Delete virtual server",
-        "Can you remove my virtual server?"
+        "Destroy a virtual server",
+        "Remove my virtual server",
+        "Delete virtual server"
       ],
       "parameters" : [
         {
@@ -40,11 +42,12 @@
     },
     {
       "class": "bluemix.vs.reboot",
+      "description": "Reboot a virtual server",
       "emittarget": "bluemix.vs.reboot",
       "texts": [
         "Reboot virtual server",
-        "Restart virtual server",
-        "Can you reboot my virtual server?"
+        "Restart a virtual server",
+        "Reboot my virtual server?"
       ],
       "parameters" : [
         {
@@ -56,11 +59,11 @@
     },
     {
       "class": "bluemix.vs.start",
+      "description": "Start a virtual server",
       "emittarget": "bluemix.vs.start",
       "texts": [
-        "Start virtual server",
-        "I want to start my virtual server",
-        "Can you start my virtual server?"
+        "Start a virtual server",
+        "Start my virtual server"
       ],
       "parameters" : [
         {
@@ -72,11 +75,12 @@
     },
     {
       "class": "bluemix.vs.stop",
+      "description": "Stop a virtual server",
       "emittarget": "bluemix.vs.stop",
       "texts": [
-        "Stop virtual server",
-        "I want to stop my virtual server",
-        "Can you stop my virtual server?"
+        "Stop a virtual server",
+        "Terminate a virtual server",
+        "Stop my virtual server"
       ],
       "parameters" : [
         {
