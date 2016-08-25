@@ -23,6 +23,7 @@ const vs = require('../lib/vs');
 const utils = require('hubot-ibmcloud-utils').utils;
 const activity = require('hubot-ibmcloud-activity-emitter');
 const Conversation = require('hubot-conversation');
+const entities = require('../lib/virtualservers.entities');
 
 // --------------------------------------------------------------
 // i18n (internationalization)
@@ -44,6 +45,10 @@ i18n.setLocale('en');
 const REBOOT_VS = /(vs|virtual server)\s+(restart|reboot)\s+(.*)/i;
 
 module.exports = (robot) => {
+
+	// Register entity handling functions
+	entities.registerEntityFunctions();
+
 	const switchBoard = new Conversation(robot);
 
 	robot.on('bluemix.vs.reboot', (res, parameters) => {

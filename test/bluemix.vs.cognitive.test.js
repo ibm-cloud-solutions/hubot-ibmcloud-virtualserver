@@ -249,4 +249,18 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 			room.robot.emit('bluemix.vs.help', res, {});
 		});
 	});
+
+	context('verify entity functions', function() {
+
+		it('should retrieve set of virtual server names', function(done) {
+			const entities = require('../src/lib/virtualservers.entities');
+			var res = { message: {text: '', user: {id: 'mimiron'}}, response: room };
+			entities.getVirtualServerNames(room.robot, res, 'vsname', {}).then(function(vsNames) {
+				expect(vsNames.length).to.eql(2);
+				done();
+			}).catch(function(error) {
+				done(error);
+			});
+		});
+	});
 });

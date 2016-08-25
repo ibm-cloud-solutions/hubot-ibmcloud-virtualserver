@@ -35,8 +35,10 @@
       "parameters" : [
         {
           "name": "vsname",
+          "title": "virtual server name",
 			    "type": "entity",
-			    "prompt": "OK. What is the name of the virtual server you want to remove?"
+			    "prompt": "OK. What is the name of the virtual server you want to remove?",
+          "entityfunction": "funcvsname"
         }
       ]
     },
@@ -52,8 +54,10 @@
       "parameters" : [
         {
           "name": "vsname",
+          "title": "virtual server name",
 			    "type": "entity",
-			    "prompt": "OK. What is the name of the virtual server you want to reboot?"
+			    "prompt": "OK. What is the name of the virtual server you want to reboot?",
+          "entityfunction": "funcvsname"
         }
       ]
     },
@@ -68,8 +72,10 @@
       "parameters" : [
         {
           "name": "vsname",
+          "title": "virtual server name",
 			    "type": "entity",
-			    "prompt": "OK. What is the name of the virtual server you want to start?"
+			    "prompt": "OK. What is the name of the virtual server you want to start?",
+          "entityfunction": "funcvsname"
         }
       ]
     },
@@ -85,8 +91,10 @@
       "parameters" : [
         {
           "name": "vsname",
+          "title": "virtual server name",
 			    "type": "entity",
-			    "prompt": "OK. What is the name of the virtual server you want to stop?"
+			    "prompt": "OK. What is the name of the virtual server you want to stop?",
+          "entityfunction": "funcvsname"
         }
       ]
     }
