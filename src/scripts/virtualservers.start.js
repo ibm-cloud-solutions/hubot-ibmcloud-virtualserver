@@ -21,6 +21,7 @@ var TAG = path.basename(__filename);
 
 const vs = require('../lib/vs');
 const activity = require('hubot-ibmcloud-activity-emitter');
+const entities = require('../lib/virtualservers.entities');
 
 // --------------------------------------------------------------
 // i18n (internationalization)
@@ -42,6 +43,10 @@ i18n.setLocale('en');
 const START_VS = /(vs|virtual server)\s+start\s+(.*)/i;
 
 module.exports = (robot) => {
+
+	// Register entity handling functions
+	entities.registerEntityFunctions();
+
 	robot.on('bluemix.vs.start', (res, parameters) => {
 		robot.logger.debug(`${TAG}: bluemix.vs.start Natural Language match.`);
 
