@@ -1,6 +1,6 @@
 {
   "name": "hubot-ibmcloud-virtualserver",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "hubot for IBM Cloud Virtual Server interactions",
   "main": "index.js",
   "repository": {
@@ -52,7 +52,7 @@
     "hubot-ibmcloud-cognitive-lib": ">=0.0.40",
     "hubot-ibmcloud-utils": ">=0.0.14",
     "hubot-conversation": ">=1.1.1",
-    "hubot-ibmcloud-activity-emitter": ">=0.0.3"    
+    "hubot-ibmcloud-activity-emitter": ">=0.0.3"
   },
   "engines": {
     "node": ">= 4.2.0"
