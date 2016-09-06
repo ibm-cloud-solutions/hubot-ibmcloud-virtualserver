@@ -7,7 +7,7 @@
 'use strict';
 const pkgcloud = require('pkgcloud');
 
-var env = {
+const env = {
 	username: process.env.HUBOT_BLUEMIX_USER,
 	password: process.env.HUBOT_BLUEMIX_PASSWORD,
 	provider: process.env.HUBOT_VIRTUAL_SERVER_PROVIDER || 'openstack',

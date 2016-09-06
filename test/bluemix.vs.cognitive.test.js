@@ -11,7 +11,7 @@ const helper = new Helper('../src/scripts');
 const expect = require('chai').expect;
 const mockUtils = require('./mock.utils.vs.js');
 
-var i18n = new (require('i18n-2'))({
+const i18n = new (require('i18n-2'))({
 	locales: ['en'],
 	extension: '.json',
 	// Add more languages to the list of locales when the files are created.
@@ -48,7 +48,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				}
 			});
 
-			var res = { message: {text: 'list my virtual servers', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: 'list my virtual servers', user: {id: 'mimiron'}}, response: room };
 			room.robot.emit('bluemix.vs.list', res, {});
 		});
 	});
@@ -64,7 +64,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				done();
 			});
 
-			var res = { message: {text: 'Start virtual server unknownServer', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: 'Start virtual server unknownServer', user: {id: 'mimiron'}}, response: room };
 			room.robot.emit('bluemix.vs.start', res, {vsname: 'unknownServer'});
 		});
 
@@ -78,7 +78,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				done();
 			});
 
-			var res = { message: {text: 'Start my virtual server new-server-test2', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: 'Start my virtual server new-server-test2', user: {id: 'mimiron'}}, response: room };
 			room.robot.emit('bluemix.vs.start', res, {vsname: 'new-server-test2'});
 		});
 
@@ -91,13 +91,13 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				}
 			});
 
-			var res = { message: {text: 'start virtual server', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: 'start virtual server', user: {id: 'mimiron'}}, response: room };
 			room.robot.emit('bluemix.vs.start', res, {});
 		});
 	});
 
 	context('user calls `virtual server stop`', function() {
-		var replyFn = function(msg){
+		let replyFn = function(msg){
 			if (msg.indexOf('Are you sure that you want to stop') >= 0) {
 				return room.user.say('mimiron', 'yes');
 			}
@@ -113,7 +113,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				done();
 			});
 
-			var res = { message: {text: 'Stop virtual server unknownServer', user: {id: 'mimiron'}}, response: room, reply: replyFn };
+			let res = { message: {text: 'Stop virtual server unknownServer', user: {id: 'mimiron'}}, response: room, reply: replyFn };
 			room.robot.emit('bluemix.vs.stop', res, {vsname: 'unknownServer'});
 		});
 
@@ -127,7 +127,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				done();
 			});
 
-			var res = { message: {text: 'Stop virtual server new-server-test', user: {id: 'mimiron'}}, response: room, reply: replyFn };
+			let res = { message: {text: 'Stop virtual server new-server-test', user: {id: 'mimiron'}}, response: room, reply: replyFn };
 			room.robot.emit('bluemix.vs.stop', res, {vsname: 'new-server-test'});
 		});
 
@@ -140,13 +140,13 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				}
 			});
 
-			var res = { message: {text: 'stop virtual server', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: 'stop virtual server', user: {id: 'mimiron'}}, response: room };
 			room.robot.emit('bluemix.vs.stop', res, {});
 		});
 	});
 
 	context('user calls `virtual server destroy`', function() {
-		var replyFn = function(msg){
+		let replyFn = function(msg){
 			if (msg.indexOf('Are you sure that you want to destroy') >= 0) {
 				return room.user.say('mimiron', 'yes');
 			}
@@ -159,7 +159,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				done();
 			});
 
-			var res = { message: {text: 'Destroy virtual server unknownServer', user: {id: 'mimiron'}}, response: room, reply: replyFn };
+			let res = { message: {text: 'Destroy virtual server unknownServer', user: {id: 'mimiron'}}, response: room, reply: replyFn };
 			room.robot.emit('bluemix.vs.destroy', res, {vsname: 'unknownServer'});
 		});
 
@@ -170,7 +170,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				done();
 			});
 
-			var res = { message: {text: 'Destroy virtual server new-server-test', user: {id: 'mimiron'}}, response: room, reply: replyFn };
+			let res = { message: {text: 'Destroy virtual server new-server-test', user: {id: 'mimiron'}}, response: room, reply: replyFn };
 			room.robot.emit('bluemix.vs.destroy', res, {vsname: 'new-server-test'});
 		});
 
@@ -183,13 +183,13 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				}
 			});
 
-			var res = { message: {text: 'destroy virtual server', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: 'destroy virtual server', user: {id: 'mimiron'}}, response: room };
 			room.robot.emit('bluemix.vs.destroy', res, {});
 		});
 	});
 
 	context('user calls `virtual server reboot`', function() {
-		var replyFn = function(msg){
+		let replyFn = function(msg){
 			if (msg.indexOf('Are you sure that you want to reboot') >= 0) {
 				return room.user.say('mimiron', 'yes');
 			}
@@ -202,7 +202,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				done();
 			});
 
-			var res = { message: {text: 'Reboot virtual server unknownServer', user: {id: 'mimiron'}}, response: room, reply: replyFn };
+			let res = { message: {text: 'Reboot virtual server unknownServer', user: {id: 'mimiron'}}, response: room, reply: replyFn };
 			room.robot.emit('bluemix.vs.reboot', res, {vsname: 'unknownServer'});
 		});
 
@@ -213,7 +213,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				done();
 			});
 
-			var res = { message: {text: 'Reboot virtual server new-server-test', user: {id: 'mimiron'}}, response: room, reply: replyFn };
+			let res = { message: {text: 'Reboot virtual server new-server-test', user: {id: 'mimiron'}}, response: room, reply: replyFn };
 			room.robot.emit('bluemix.vs.reboot', res, {vsname: 'new-server-test'});
 		});
 
@@ -226,7 +226,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				}
 			});
 
-			var res = { message: {text: 'reboot virtual server', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: 'reboot virtual server', user: {id: 'mimiron'}}, response: room };
 			room.robot.emit('bluemix.vs.reboot', res, {});
 		});
 	});
@@ -245,7 +245,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 				}
 			});
 
-			var res = { message: {text: 'help virtual server', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: 'help virtual server', user: {id: 'mimiron'}}, response: room };
 			room.robot.emit('bluemix.vs.help', res, {});
 		});
 	});
@@ -254,7 +254,7 @@ describe('Interacting with Virtual Servers via Natural Language -', function() {
 
 		it('should retrieve set of virtual server names', function(done) {
 			const entities = require('../src/lib/virtualservers.entities');
-			var res = { message: {text: '', user: {id: 'mimiron'}}, response: room };
+			let res = { message: {text: '', user: {id: 'mimiron'}}, response: room };
 			entities.getVirtualServerNames(room.robot, res, 'vsname', {}).then(function(vsNames) {
 				expect(vsNames.length).to.eql(2);
 				done();

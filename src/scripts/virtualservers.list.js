@@ -16,8 +16,8 @@
   */
 'use strict';
 
-var path = require('path');
-var TAG = path.basename(__filename);
+const path = require('path');
+const TAG = path.basename(__filename);
 
 const vs = require('../lib/vs');
 const palette = require('hubot-ibmcloud-utils').palette;
@@ -28,7 +28,7 @@ const activity = require('hubot-ibmcloud-activity-emitter');
 // It will read from a peer messages.json file.  Later, these
 // messages can be referenced throughout the module.
 // --------------------------------------------------------------
-var i18n = new (require('i18n-2'))({
+const i18n = new (require('i18n-2'))({
 	locales: ['en'],
 	extension: '.json',
 	// Add more languages to the list of locales when the files are created.
@@ -81,7 +81,7 @@ module.exports = (robot) => {
 					return attachment;
 				});
 
-				var vsNames = servers.map(function(server){
+				let vsNames = servers.map(function(server){
 					return server.name;
 				});
 				nlcconfig.updateGlobalParameterValues('IBMcloudVirtualservers_vsname', vsNames);

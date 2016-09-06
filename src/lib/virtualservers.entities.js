@@ -12,7 +12,7 @@ const nlcconfig = require('hubot-ibmcloud-cognitive-lib').nlcconfig;
 const NAMESPACE = 'IBMcloudVirtualservers';
 const PARAM_VSNAME = 'vsname';
 
-var functionsRegistered = false;
+let functionsRegistered = false;
 
 
 function buildGlobalName(parameterName) {
@@ -32,7 +32,7 @@ function registerEntityFunctions() {
 function getVirtualServerNames(robot, res, parameterName, parameters) {
 	return new Promise(function(resolve, reject) {
 		vs.getServers().then((result) => {
-			var vsNames = result.map(function(virtualserver){
+			let vsNames = result.map(function(virtualserver){
 				return virtualserver.name;
 			});
 			nlcconfig.updateGlobalParameterValues(buildGlobalName(PARAM_VSNAME), vsNames);
